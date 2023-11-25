@@ -1,0 +1,87 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel = "stylesheet" type = "text/css" href = "CSS/style.css">
+<link rel = "stylesheet" type = "text/css" href = "CSS/skitter.styles.css">
+ <script src ="js/jquery-1.6.3.min.js"></script>
+ <script src ="js/jquery.easing.1.3.js"></script>
+  <script src ="js/jquery.animate-colors-min.js"></script>
+   <script src ="js/jquery.skitter.min.js"></script>
+    <script src ="js/highlight.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		var options = {};
+    		if (document.location.search) {
+    			var array = document.location.search.split('=');
+    			var param = array[0].replace('?','');
+    			var value = array[1];
+    			if (param == 'animation'){
+    				options.animation = value;
+    			}
+    			else if (param == 'type_navigaton'){
+    				if (value == 'dots_preview'){
+    					$('.border_box').CSS({'marginBottom':'40px'});
+    					options['dots'] = true;
+    					options['preview'] = true;
+    				}
+    				else {
+    					options[value] = true;
+    					if (value == 'dots') $ ('.border_box').CSS({'marginBottom': '40px'});
+    				}
+    			}
+    		}
+    		$('.box_skitter_large').skitter(options);
+    		//Highlight
+    		$('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol'});
+    	});
+    </script>
+</head>
+<body>
+	<div class = "Container">
+		<div class = "headercon">
+			<div class = "logo">
+				<img src = "images/Logo.jpg" alt ="" width = "300" height = "100" /> 
+			</div>
+			<div class ="headright"><br>
+				<small> For more information, please call us:</small></br>
+				<label> 09083008765</label>
+			</div>
+		</div>
+		<div class = "navbg">
+			<div class = "nav_inside">
+				<ul> 
+					<li><a href ="index.html">HOME</a></li>
+					<li><a href ="AboutUs.html">ABOUT US</a></li>
+					<li><a href ="SERVICES.html">SERVICES</a></li>
+					<li><a href ="Offers.html">OFFERS</a></li>
+					<li><a href ="">RESOURCES</a></li>
+					<li><a href ="#">CONTACT US</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class ="flashcon">
+		<div class ="box_skitter box_skitter_large" style= "z-index:0;">
+			<ul>
+				<li> <a href="#blindHeight"><img src = "./images/nice.jpg"	class="random"/></a></li>
+				<li> <a href="#blindHeight"><img src = "./images/cup.jpg"	class="random"/></a></li>
+				<li> <a href="#blindHeight"><img src = "./images/cake2.jpg"	class="random"/></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class = "midboxcon">
+		<div class = "midbox1">
+			<img src = "images/cake3.jpg" alt ="" width = "333" height = "187" /> 
+		</div>
+	
+		<div class = "midbox2">
+			<img src = "images/past1.jpg" alt ="" width = "333" height = "187" /> 
+		</div>
+
+		<div class = "midbox3">
+			<img src = "images/past2.jpg" alt ="" width = "334" height = "187" /> 
+		</div>
+
+</div>
+</body>
+</html>
